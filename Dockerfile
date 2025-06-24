@@ -6,6 +6,7 @@ WORKDIR /src
 
 COPY ./go.mod /src/
 COPY ./go.sum /src/
+ENV GOPROXY https://goproxy.cn
 
 RUN go mod download && go mod verify
 
